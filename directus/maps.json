@@ -10,9 +10,10 @@
     },
     "data": [
         {
-            "_sync_id": "map-map.oceannomads.co",
-            "name": "Ocean Nomads Map",
-            "url": "https://map.oceannomads.co",
+            "_sync_id": "map-local-development",
+            "name": "Local Development",
+            "url": "http://local.development",
+            "logo": "vessel-svg",
 		    "zoom": 6,
 		    "own_tag_space": true,
 		    "center": {
