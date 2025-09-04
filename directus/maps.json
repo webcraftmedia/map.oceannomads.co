@@ -14,13 +14,13 @@
             "name": "Ocean Nomads Map",
             "url": "https://map.oceannomads.co",
             "logo": "vessel-svg",
-		    "zoom": 6,
+		    "zoom": 3,
 		    "own_tag_space": true,
 		    "center": {
 			    "type": "Point",
 			    "coordinates": [
-				    10.067625824315172,
-				    50.51565268622562
+				    5,
+				    45
 			    ]
 		    },
 		    "donation_widget": false,

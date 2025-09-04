@@ -50,7 +50,7 @@
             "_sync_id": "layer-nomads_location",
             "name": "Nomads Location",
             "itemType": "type-ON_nomads_location",
-            "userProfileLayer": false,
+            "userProfileLayer": true,
             "indexIcon": "users-outline",
             "menuColor": "#18222F",
             "menuIcon": "user-solid",
