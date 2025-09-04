@@ -33,7 +33,7 @@
             "itemType": "type-event",
             "userProfileLayer": false,
             "indexIcon": "calendar-outline",
-            "menuColor": "#6644FF",
+            "menuColor": "#748AA4",
             "menuIcon": "calendar-solid",
             "menuText": "Add new Event",
             "markerIcon" : "marker-calendar",
