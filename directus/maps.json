@@ -24,7 +24,6 @@
 			    ]
 		    },
 		    "donation_widget": false,
-		    "custom_text": "# Welcome to the Development Server\n\nThis map is just for development purposes and to try out new things.",
 		    "default_theme": null
         }
     ]
