@@ -1,29 +1,35 @@
--- Layer: Event (static: 5d12f356-349a-4463-a57c-5fc54eede6ba)
--- Flow: Ocean Nomads Create Event
+-- Flows:
+-- 3c6cdddf-2944-493d-bc7f-2769fd87b1d6 > Ocean Nomads: Delete Nomad
+-- cb772a2c-150c-4cca-bc2c-1f8498a5cd92 > Ocean Nomads: Update Nomad
+-- 8b79cca0-d346-4d05-8bb2-c4b3c45d0721 > Ocean Nomads: Create Nomad
+-- 77f1fc79-d0fd-4f5d-a168-50fa3948a945 > Ocean Nomads: Create Location
+
+-- Layer: Event
+-- Flow: Ocean Nomads: Create Event
 UPDATE public.directus_operations
 SET options = jsonb_set(options::jsonb,'{payload,layer}', to_jsonb((SELECT id FROM layers WHERE name = 'Events')), true)
-WHERE options->'payload'->>'layer' = '5d12f356-349a-4463-a57c-5fc54eede6ba'; -- 2x
+WHERE key IN ('item_create_tsz05_xukmd', 'item_create_tsz05');
 
--- Layer: Nomads Base (static: a546f94b-8928-4d0b-b3ca-39bd109abd34)
+-- Layer: Nomads Base
 -- Flow: Ocean Nomads: Create Nomad
 -- Flow: Ocean Nomads: Update Nomad
 -- Flow: Ocean Nomads: Delete Nomad
 UPDATE public.directus_operations
 SET options = jsonb_set(options::jsonb,'{payload,layer}', to_jsonb((SELECT id FROM layers WHERE name = 'Nomads Base')), true)
-WHERE options->'payload'->>'layer' = 'a546f94b-8928-4d0b-b3ca-39bd109abd34'; -- 1x
+WHERE key IN ('item_create_oym38', 'item_create_oym38_epxyf');
 
 UPDATE public.directus_operations
 SET options = jsonb_set(options::jsonb,'{query,filter,_and,0,layer,_eq}', to_jsonb((SELECT id FROM layers WHERE name = 'Nomads Base')), true)
-WHERE options->'query'->'filter'->'_and'->0->'layer'->>'_eq' = 'a546f94b-8928-4d0b-b3ca-39bd109abd34'; -- 2x
+WHERE key IN ('item_delete_rasrd', 'item_read_soekq');
 
--- Layer: Nomads Location (static: 1c0a440f-bdf8-43a0-80bc-2d099d69b3ca)
+-- Layer: Nomads Location
 -- Flow: Ocean Nomads: Create Location
 -- Flow: Ocean Nomads: Update Nomad
 -- Flow: Ocean Nomads: Delete Nomad
 UPDATE public.directus_operations
 SET options = jsonb_set(options::jsonb,'{query,filter,_and,0,layer,_eq}', to_jsonb((SELECT id FROM layers WHERE name = 'Nomads Location')), true)
-WHERE options->'query'->'filter'->'_and'->0->'layer'->>'_eq' = '1c0a440f-bdf8-43a0-80bc-2d099d69b3ca'; -- 2x
+WHERE key IN ('item_delete_rasrd_boace','item_update_5eu19', 'item_update_5eu19_prdze');
 
 UPDATE public.directus_operations
 SET options = jsonb_set(options::jsonb,'{filter,$trigger,payload,layer,_eq}', to_jsonb((SELECT id FROM layers WHERE name = 'Nomads Location')), true)
-WHERE options->'filter'->'$trigger'->'payload'->'layer'->>'_eq' = '1c0a440f-bdf8-43a0-80bc-2d099d69b3ca'; -- 1x
+WHERE key IN ('condition_vvsgp');
