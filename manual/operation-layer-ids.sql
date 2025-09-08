@@ -20,7 +20,7 @@ WHERE key IN ('item_create_oym38', 'item_create_oym38_epxyf');
 
 UPDATE public.directus_operations
 SET options = jsonb_set(options::jsonb,'{query,filter,_and,0,layer,_eq}', to_jsonb((SELECT id FROM layers WHERE name = 'Nomads Base')), true)
-WHERE key IN ('item_delete_rasrd', 'item_read_soekq');
+WHERE key IN ('item_delete_rasrd', 'item_update_e3pl5_wansj', 'item_update_o6cn8', 'item_update_o6cn8_nitpl');
 
 -- Layer: Nomads Location
 -- Flow: Ocean Nomads: Create Location
@@ -31,5 +31,8 @@ SET options = jsonb_set(options::jsonb,'{query,filter,_and,0,layer,_eq}', to_jso
 WHERE key IN ('item_delete_rasrd_boace','item_update_5eu19', 'item_update_5eu19_prdze');
 
 UPDATE public.directus_operations
-SET options = jsonb_set(options::jsonb,'{filter,$trigger,payload,layer,_eq}', to_jsonb((SELECT id FROM layers WHERE name = 'Nomads Location')), true)
+SET options = jsonb_set(options::jsonb,'{filter,$trigger,payload,_or,0,layer,_eq}', to_jsonb((SELECT id FROM layers WHERE name = 'Nomads Location')), true)
+WHERE key IN ('condition_vvsgp');
+UPDATE public.directus_operations
+SET options = jsonb_set(options::jsonb,'{filter,$trigger,payload,_or,1,layer,_eq}', to_jsonb((SELECT id FROM layers WHERE name = 'Nomads Base')), true)
 WHERE key IN ('condition_vvsgp');
