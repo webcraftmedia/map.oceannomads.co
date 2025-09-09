@@ -10,24 +10,6 @@
     },
     "data": [
         {
-            "_sync_id": "layer-places",
-            "name": "Places",
-            "itemType": "type-simple",
-            "userProfileLayer": false,
-            "indexIcon": "map-pin-outline",
-            "menuColor": "#2ECDA7",
-            "menuIcon": "point-solid",
-            "menuText": "Add new Place",
-            "markerShape" : "circle",
-            "markerDefaultColor2": null,
-            "onlyOnePerOwner": false,
-            "index_plus_button": true,
-            "public_edit_items": false,
-            "listed": true,
-            "item_presets": null,
-            "sort": 1
-        },
-        {
             "_sync_id": "layer-events",
             "name": "Events",
             "itemType": "type-event",
