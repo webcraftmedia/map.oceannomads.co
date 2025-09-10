@@ -62,7 +62,7 @@
             "show_profile_button" : true,
             "show_start_end" : false,
             "show_text_input" : true,
-            "show_name_iput" : true,
+            "show_name_input" : true,
             "show_header_view_in_form" : false,
             "small_form_edit" : false
         }
