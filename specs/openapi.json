@@ -23336,6 +23336,18 @@
       "ItemsRelations": {
         "type": "object",
         "properties": {
+          "direction": {
+            "nullable": true,
+            "type": "string"
+          },
+          "heading": {
+            "nullable": true,
+            "type": "string"
+          },
+          "hideWhenEmpty": {
+            "nullable": true,
+            "type": "boolean"
+          },
           "id": {
             "nullable": false,
             "type": "integer"
@@ -24700,10 +24712,6 @@
             "type": "string"
           },
           "offers_and_needs": {
-            "nullable": true,
-            "type": "boolean"
-          },
-          "onepager": {
             "nullable": true,
             "type": "boolean"
           },

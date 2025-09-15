@@ -125,12 +125,12 @@
             "_or": [
               {
                 "layer": {
-                  "_eq": "98f4cd2f-e1ce-4db8-bb16-f4bbf3d6991a"
+                  "_eq": "2037691f-dd84-44e5-8168-4d2e4431d5c2"
                 }
               },
               {
                 "layer": {
-                  "_eq": "4f22c074-a5c0-47a3-9e76-2bb76eb2e362"
+                  "_eq": "08370ab0-aea8-4397-a57f-ccf68af36d6e"
                 }
               }
             ]
@@ -422,7 +422,7 @@
     "options": {
       "payload": {
         "name": "{{$trigger.payload.first_name}} {{$trigger.payload.last_name}}",
-        "layer": "4f22c074-a5c0-47a3-9e76-2bb76eb2e362",
+        "layer": "08370ab0-aea8-4397-a57f-ccf68af36d6e",
         "extended": {
           "external_profile_id": "{{$trigger.payload.id}}"
         },
@@ -447,7 +447,7 @@
     "options": {
       "payload": {
         "name": "{{$trigger.payload.first_name}} {{$trigger.payload.last_name}}",
-        "layer": "4f22c074-a5c0-47a3-9e76-2bb76eb2e362",
+        "layer": "08370ab0-aea8-4397-a57f-ccf68af36d6e",
         "extended": {
           "external_profile_id": "{{$trigger.payload.id}}"
         },
@@ -473,7 +473,7 @@
         "end": "{{$trigger.payload.end}}",
         "name": "{{$trigger.payload.title}}",
         "text": "{{exec_p5p4r.text}}",
-        "layer": "5b9f713c-74b6-4dcc-a4d0-c7893b267d6e",
+        "layer": "40dbc18f-9931-41ad-838a-ad66baab337d",
         "start": "{{$trigger.payload.start}}",
         "position": "{{$last.data.features[0].geometry}}"
       },
@@ -497,7 +497,7 @@
         "end": "{{$trigger.payload.end}}",
         "name": "{{$trigger.payload.title}}",
         "text": "{{exec_p5p4r.text}}",
-        "layer": "5b9f713c-74b6-4dcc-a4d0-c7893b267d6e",
+        "layer": "40dbc18f-9931-41ad-838a-ad66baab337d",
         "start": "{{$trigger.payload.start}}"
       },
       "collection": "items",
@@ -565,7 +565,7 @@
           "_and": [
             {
               "layer": {
-                "_eq": "4f22c074-a5c0-47a3-9e76-2bb76eb2e362"
+                "_eq": "08370ab0-aea8-4397-a57f-ccf68af36d6e"
               }
             },
             {
@@ -597,7 +597,7 @@
           "_and": [
             {
               "layer": {
-                "_eq": "98f4cd2f-e1ce-4db8-bb16-f4bbf3d6991a"
+                "_eq": "2037691f-dd84-44e5-8168-4d2e4431d5c2"
               }
             },
             {
@@ -949,7 +949,7 @@
           "_and": [
             {
               "layer": {
-                "_eq": "98f4cd2f-e1ce-4db8-bb16-f4bbf3d6991a"
+                "_eq": "2037691f-dd84-44e5-8168-4d2e4431d5c2"
               }
             },
             {
@@ -986,7 +986,7 @@
           "_and": [
             {
               "layer": {
-                "_eq": "98f4cd2f-e1ce-4db8-bb16-f4bbf3d6991a"
+                "_eq": "2037691f-dd84-44e5-8168-4d2e4431d5c2"
               }
             },
             {
@@ -1132,15 +1132,13 @@
     "position_x": 91,
     "position_y": 1,
     "options": {
-      "permissions": "$full",
-      "emitEvents": false,
       "key": [],
       "query": {
         "filter": {
           "_and": [
             {
               "layer": {
-                "_eq": "4f22c074-a5c0-47a3-9e76-2bb76eb2e362"
+                "_eq": "08370ab0-aea8-4397-a57f-ccf68af36d6e"
               }
             },
             {
@@ -1153,10 +1151,12 @@
       },
       "payload": {
         "name": "{{item_read_i7dz7.first_name}} {{item_read_i7dz7.last_name}}",
-        "image_external": "{{item_read_i7dz7.avatar_url}}",
-        "position": "{{$last.data.features[0].geometry}}"
+        "position": "{{$last.data.features[0].geometry}}",
+        "image_external": "{{item_read_i7dz7.avatar_url}}"
       },
-      "collection": "items"
+      "collection": "items",
+      "emitEvents": false,
+      "permissions": "$full"
     },
     "resolve": "e7b3b7b8-c34a-4024-8aa4-d7d4687d6752",
     "reject": null,
@@ -1170,15 +1170,13 @@
     "position_x": 81,
     "position_y": 17,
     "options": {
-      "permissions": "$full",
-      "emitEvents": false,
       "key": [],
       "query": {
         "filter": {
           "_and": [
             {
               "layer": {
-                "_eq": "4f22c074-a5c0-47a3-9e76-2bb76eb2e362"
+                "_eq": "08370ab0-aea8-4397-a57f-ccf68af36d6e"
               }
             },
             {
@@ -1194,7 +1192,9 @@
         "position": null,
         "image_external": "{{item_read_i7dz7.avatar_url}}"
       },
-      "collection": "items"
+      "collection": "items",
+      "emitEvents": false,
+      "permissions": "$full"
     },
     "resolve": "b22755ba-4ec5-4e04-a3fe-a390a9bc75ab",
     "reject": null,

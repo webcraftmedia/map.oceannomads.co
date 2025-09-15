@@ -2116,6 +2116,9 @@ type policy_me_globals_type {
 }
 
 type relations {
+  direction: String
+  heading: String
+  hideWhenEmpty: Boolean
   id: ID!
   relation: String
 }
@@ -2251,7 +2254,6 @@ type types {
   id: ID!
   name: String
   offers_and_needs: Boolean
-  onepager: Boolean
   questlog: Boolean
   relations: Boolean
   show_header_view_in_form: Boolean
@@ -2843,7 +2845,6 @@ input create_types_input {
   id: ID
   name: String
   offers_and_needs: Boolean
-  onepager: Boolean
   questlog: Boolean
   relations: Boolean
   show_header_view_in_form: Boolean
@@ -3824,6 +3825,9 @@ input number_filter_operators {
 }
 
 input relations_filter {
+  direction: string_filter_operators
+  heading: string_filter_operators
+  hideWhenEmpty: boolean_filter_operators
   id: number_filter_operators
   relation: string_filter_operators
   _and: [relations_filter]
@@ -3912,7 +3916,6 @@ input types_filter {
   id: id_filter_operators
   name: string_filter_operators
   offers_and_needs: boolean_filter_operators
-  onepager: boolean_filter_operators
   questlog: boolean_filter_operators
   relations: boolean_filter_operators
   show_header_view_in_form: boolean_filter_operators
@@ -4383,7 +4386,6 @@ input update_types_input {
   id: ID
   name: String
   offers_and_needs: Boolean
-  onepager: Boolean
   questlog: Boolean
   relations: Boolean
   show_header_view_in_form: Boolean

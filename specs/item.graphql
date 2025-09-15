@@ -2161,6 +2161,9 @@ type oceannomads_profiles_mutated {
 }
 
 type relations {
+  direction: String
+  heading: String
+  hideWhenEmpty: Boolean
   id: ID!
   relation: String
 }
@@ -2179,6 +2182,9 @@ type relations_aggregated {
 }
 
 type relations_aggregated_count {
+  direction: Int
+  heading: Int
+  hideWhenEmpty: Int
   id: Int
   relation: Int
 }
@@ -2385,7 +2391,6 @@ type types {
   id: ID!
   name: String
   offers_and_needs: Boolean
-  onepager: Boolean
   questlog: Boolean
   relations: Boolean
   show_header_view_in_form: Boolean
@@ -2424,7 +2429,6 @@ type types_aggregated_count {
   id: Int
   name: Int
   offers_and_needs: Int
-  onepager: Int
   questlog: Int
   relations: Int
   show_header_view_in_form: Int
@@ -2800,6 +2804,9 @@ type version_oceannomads_profiles {
 
 """"""
 type version_relations {
+  direction: String
+  heading: String
+  hideWhenEmpty: Boolean
   id: ID
   relation: String
 }
@@ -2869,7 +2876,6 @@ type version_types {
   id: ID
   name: String
   offers_and_needs: Boolean
-  onepager: Boolean
   questlog: Boolean
   relations: Boolean
   show_header_view_in_form: Boolean
@@ -3367,6 +3373,9 @@ input create_oceannomads_profiles_input {
 }
 
 input create_relations_input {
+  direction: String
+  heading: String
+  hideWhenEmpty: Boolean
   id: ID
   relation: String
 }
@@ -3430,7 +3439,6 @@ input create_types_input {
   id: ID
   name: String
   offers_and_needs: Boolean
-  onepager: Boolean
   questlog: Boolean
   relations: Boolean
   show_header_view_in_form: Boolean
@@ -4399,6 +4407,9 @@ input oceannomads_profiles_filter {
 }
 
 input relations_filter {
+  direction: string_filter_operators
+  heading: string_filter_operators
+  hideWhenEmpty: boolean_filter_operators
   id: number_filter_operators
   relation: string_filter_operators
   _and: [relations_filter]
@@ -4505,7 +4516,6 @@ input types_filter {
   id: id_filter_operators
   name: string_filter_operators
   offers_and_needs: boolean_filter_operators
-  onepager: boolean_filter_operators
   questlog: boolean_filter_operators
   relations: boolean_filter_operators
   show_header_view_in_form: boolean_filter_operators
@@ -4961,6 +4971,9 @@ input update_oceannomads_profiles_input {
 }
 
 input update_relations_input {
+  direction: String
+  heading: String
+  hideWhenEmpty: Boolean
   id: ID
   relation: String
 }
@@ -5024,7 +5037,6 @@ input update_types_input {
   id: ID
   name: String
   offers_and_needs: Boolean
-  onepager: Boolean
   questlog: Boolean
   relations: Boolean
   show_header_view_in_form: Boolean
