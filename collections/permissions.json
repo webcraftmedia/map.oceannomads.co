@@ -1666,7 +1666,6 @@
     "validation": {},
     "presets": null,
     "fields": [
-      "first_name",
       "id",
       "avatar"
     ],
@@ -1740,7 +1739,8 @@
     "validation": null,
     "presets": null,
     "fields": [
-      "*"
+      "id",
+      "items_id"
     ],
     "policy": "4d5d2bd8-7e1f-40c1-b10b-3f0ecac70877",
     "_syncId": "4da6d11b-0d50-43e7-9b06-0b53099844de"
@@ -1991,28 +1991,38 @@
   {
     "collection": "items",
     "action": "read",
-    "permissions": {
-      "_and": [
-        {
-          "_or": [
-            {
-              "draft": {
-                "_eq": false
-              }
-            },
-            {
-              "user_created": {
-                "_eq": "$CURRENT_USER"
-              }
-            }
-          ]
-        }
-      ]
-    },
+    "permissions": null,
     "validation": {},
     "presets": null,
     "fields": [
-      "*"
+      "id",
+      "user_created",
+      "date_created",
+      "user_updated",
+      "date_updated",
+      "color",
+      "position",
+      "image",
+      "layer",
+      "relations",
+      "parent",
+      "start",
+      "end",
+      "offers",
+      "needs",
+      "public_edit",
+      "markerIcon",
+      "slug",
+      "contact",
+      "status",
+      "telephone",
+      "group_type",
+      "next_appointment",
+      "gallery",
+      "openCollectiveSlug",
+      "draft",
+      "secrets",
+      "extended"
     ],
     "policy": "4d5d2bd8-7e1f-40c1-b10b-3f0ecac70877",
     "_syncId": "682d8bf0-8d1c-4c0d-bf66-1b51af08526e"
