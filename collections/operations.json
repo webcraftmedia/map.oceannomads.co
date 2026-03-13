@@ -1132,6 +1132,8 @@
     "position_x": 91,
     "position_y": 1,
     "options": {
+      "permissions": "$full",
+      "emitEvents": false,
       "key": [],
       "query": {
         "filter": {
@@ -1151,12 +1153,10 @@
       },
       "payload": {
         "name": "{{item_read_i7dz7.first_name}} {{item_read_i7dz7.last_name}}",
-        "position": "{{$last.data.features[0].geometry}}",
-        "image_external": "{{item_read_i7dz7.avatar_url}}"
+        "image_external": "{{item_read_i7dz7.avatar_url}}",
+        "position": "{{$last.data.features[0].geometry}}"
       },
-      "collection": "items",
-      "emitEvents": false,
-      "permissions": "$full"
+      "collection": "items"
     },
     "resolve": "e7b3b7b8-c34a-4024-8aa4-d7d4687d6752",
     "reject": null,
@@ -1170,6 +1170,8 @@
     "position_x": 81,
     "position_y": 17,
     "options": {
+      "permissions": "$full",
+      "emitEvents": false,
       "key": [],
       "query": {
         "filter": {
@@ -1192,9 +1194,7 @@
         "position": null,
         "image_external": "{{item_read_i7dz7.avatar_url}}"
       },
-      "collection": "items",
-      "emitEvents": false,
-      "permissions": "$full"
+      "collection": "items"
     },
     "resolve": "b22755ba-4ec5-4e04-a3fe-a390a9bc75ab",
     "reject": null,

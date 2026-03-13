@@ -1666,6 +1666,7 @@
     "validation": {},
     "presets": null,
     "fields": [
+      "first_name",
       "id",
       "avatar"
     ],
